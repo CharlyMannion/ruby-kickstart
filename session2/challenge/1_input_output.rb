@@ -14,9 +14,11 @@
 
 def sum_difference_product
   puts "enter two numbers"
-  input_one = gets.chomp
-  input_two = gets.chomp
-  puts "You said: #{input_one} and #{input_two}"
+  input_one = gets.chomp.to_i
+  input_two = gets.chomp.to_i
+  # puts "You said: #{input_one} and #{input_two}"
+  sum = input_one + input_two
+  puts "Sum of those is #{sum}."
 end
 
 sum_difference_product
