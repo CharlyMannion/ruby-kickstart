@@ -11,17 +11,23 @@
 # input_two = gets.chomp
 # puts "You said: #{input_one} and #{input_two}"
 
-
 def sum_difference_product
-  puts "enter two numbers"
-  input_one = gets.chomp.to_i
-  input_two = gets.chomp.to_i
-  sum = input_one + input_two
-  puts "Sum of those is #{sum}."
-  difference = input_two-input_one
-  puts "The difference between those numbers is #{difference}."
-  product = input_two * input_one
-  puts "The product of those numbers is #{product}."
+  nums = gets.split(" ")
+  a = nums[0].to_i
+  b = nums[1].to_i
+  puts a+b
+  puts a-b
+  puts a*b
 end
+#
+# sum_difference_product
 
-sum_difference_product
+# puts "enter two numbers"
+# input_one = gets.chomp.to_i
+# input_two = gets.chomp.to_i
+# sum = input_one + input_two
+# puts "Sum of those is #{sum}."
+# difference = input_two-input_one
+# puts "The difference between those numbers is #{difference}."
+# product = input_two * input_one
+# puts "The product of those numbers is #{product}."
