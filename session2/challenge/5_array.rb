@@ -15,16 +15,16 @@
 # mod_three [0,1,2,3,4,5,6,7] # => [1, 2, 1, 2, 1]
 
 def mod_three(numbers_array)
-  # numbers_array.select { |number| number % 3 != 0 }.map { |number| number % 3 }
-  to_return=[]
-  numbers_array.each { |number|
-    if number % 3 != 0
-    remainder = number % 3
-    to_return.push(remainder)
-  else
-  end
-  }
-  p to_return
+  numbers_array.select { |number| number % 3 != 0 }.map { |number| number % 3 }
+  # to_return=[]
+  # numbers_array.each { |number|
+  #   if number % 3 != 0
+  #   remainder = number % 3
+  #   to_return.push(remainder)
+  # else
+  # end
+  # }
+  # p to_return
 end
 
 mod_three([0,1,2,3,4,5,6,7])
