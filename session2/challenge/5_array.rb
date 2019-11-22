@@ -1,7 +1,7 @@
-# Write a function named mod_three which takes an array of numbers, 
+# Write a function named mod_three which takes an array of numbers,
 # and return a new array consisting of their remainder when divided by three.
 # Exclude any numbers which are actually dividible by three.
-# 
+#
 # EXAMPLES:
 # mod_three [0]  # => []
 # mod_three [1]  # => [1]
@@ -13,3 +13,18 @@
 # mod_three [7]  # => [1]
 #
 # mod_three [0,1,2,3,4,5,6,7] # => [1, 2, 1, 2, 1]
+
+def mod_three(numbers_array)
+  # numbers_array.select { |number| number % 3 != 0 }.map { |number| number % 3 }
+  to_return=[]
+  numbers_array.each { |number|
+    if number % 3 != 0
+    remainder = number % 3
+    to_return.push(remainder)
+  else
+  end
+  }
+  p to_return
+end
+
+mod_three([0,1,2,3,4,5,6,7])
