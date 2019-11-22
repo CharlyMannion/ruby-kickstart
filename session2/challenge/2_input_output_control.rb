@@ -35,14 +35,6 @@ def hi_hi_goodbye
   puts "goodbye"
 end
 
-# ask_input
-#   until user_input == 'exit' do
-#     gets.to_i.times { print "hi " }
-#     puts
-#     ask_input
-#   end
-
-
 
 # This will just invoke the method if you run this program directly
 # This way you can try it out by running "$ ruby 2_input_output_control.rb"
