@@ -18,16 +18,29 @@
 # remember you can try your program out with              $ ruby 2_input_output_control.rb
 # and when you think it is correct, you can test it with  $ rake 2:2
 
-def hi_hi_goodbye
-  puts "Enter a number"
-  num_of_times = gets.to_i
-  puts num_of_times
-  message = "hi "
-  num_of_times.times do
-    print(message)
-  end
+def ask_input
+  puts "Enter a number or bye"
 end
 
+def hi_hi_goodbye
+  loop do
+    ask_input
+    answer = gets.chomp
+    if answer == 'bye'
+      break
+    end
+    answer.to_i.times { print 'hi ' }
+    puts
+  end
+  puts "goodbye"
+end
+
+# ask_input
+#   until user_input == 'exit' do
+#     gets.to_i.times { print "hi " }
+#     puts
+#     ask_input
+#   end
 
 
 
