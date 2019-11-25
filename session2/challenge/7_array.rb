@@ -10,8 +10,14 @@
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
 def alternate_words(input)
-  words_array = input.scan(/[\w'-]+|\W+/).select {|x| x.match(/\S/)}
+  punctuation_removed = input.gsub(/[!@#$%^&*()-=_+|;:",.<>?]/, '')
+  puts "Punctuation removed before"
+  puts punctuation_removed
+  puts "Punctuation removed after"
+  words_array = punctuation_removed.scan(/[\w'-]+|\W+/).select {|x| x.match(/\S/)}
   new_array = words_array.select{|x| words_array.index(x) % 2 == 0}
+  puts "new_array before"
+  puts new_array
   p new_array
 end
 
