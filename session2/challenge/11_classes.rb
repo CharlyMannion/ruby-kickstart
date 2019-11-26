@@ -36,9 +36,6 @@ class BeerSong
 
   def print_song
     this_num = @initial_number
-    # worded_num = this_num.humanize.capitalize
-    # dropped_num = this_num - 1
-    # worded_dropped_num = (this_num - 1).humanize.capitalize
     string_song = "#{this_num.humanize.capitalize} bottles of beer on the wall,\n#{this_num.humanize.capitalize} bottles of beer,\nTake one down, pass it around,\n#{(this_num - 1).humanize.capitalize} bottles of beer on the wall."
     puts string_song
   end
