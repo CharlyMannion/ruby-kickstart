@@ -38,7 +38,8 @@ class BeerSong
     this_num = @initial_number
     nums_to_sing = [*1..this_num].reverse
     nums_to_sing.each{|x|
-      string_song = "#{x.humanize.capitalize} bottles of beer on the wall,\n#{x.humanize.capitalize} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
+      y = x.humanize.capitalize
+      string_song = "#{y} bottles of beer on the wall,\n#{y} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
       puts string_song
     }
   end
