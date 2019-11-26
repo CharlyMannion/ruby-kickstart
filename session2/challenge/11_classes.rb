@@ -12,9 +12,48 @@
 # Zero bottles of beer on the wall.
 #
 # Your program should not use ninety-nine output statements!
-# Design your program with a class named BeerSong whose initialize method 
+# Design your program with a class named BeerSong whose initialize method
 # receives a parameter indicating the number of bottles of beer initially on the wall.
 # If the parameter is less than zero, set the number of bottles to zero. Similarly,
 # if the parameter is greater than 99, set the number of beer bottles to 99
 # Then make a public method called print_song that outputs all stanzas from the number of bottles of beer down to zero.
 # Add any additional methods you find helpful.
+
+require 'humanize'
+# puts 100.humanize
+
+class BeerSong
+  attr_accessor 'initial_number'
+
+  def initialize(initial_number)
+    if initial_number>=99
+      @initial_number = 99
+    elsif initial_number<=0
+      @initial_number = 0
+    else
+    @initial_number = initial_number
+    end
+  end
+
+  def print_song
+    this_num = @initial_number
+    worded_num = this_num.humanize.capitalize
+    dropped_num = this_num - 1
+    worded_dropped_num = dropped_num.humanize.capitalize
+    puts "#{worded_num} bottles of beer on the wall,"
+    puts "#{worded_num} bottles of beer,"
+    puts "Take one down, pass it around,"
+    puts "#{worded_dropped_num} bottles of beer on the wall."
+  end
+
+end
+
+song = BeerSong.new(88)
+puts song.initial_number
+song.print_song
+
+# song2 = BeerSong.new(100)
+# puts song2.initial_number
+#
+# song3 = BeerSong.new(-5)
+# puts song3.initial_number
