@@ -35,12 +35,9 @@ class BeerSong
   end
 
   def print_song
-    this_num = @initial_number
-    nums_to_sing = [*1..this_num].reverse
-    nums_to_sing.each{|x|
+    [*1..@initial_number].reverse.each{|x|
       y = x.humanize.capitalize
-      string_song = "#{y} bottles of beer on the wall,\n#{y} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
-      puts string_song
+      puts "#{y} bottles of beer on the wall,\n#{y} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
     }
   end
 
