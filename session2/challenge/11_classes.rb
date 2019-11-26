@@ -20,7 +20,6 @@
 # Add any additional methods you find helpful.
 
 require 'humanize'
-# puts 100.humanize
 
 class BeerSong
   attr_accessor 'initial_number'
@@ -49,11 +48,12 @@ class BeerSong
 end
 
 song = BeerSong.new(88)
-puts song.initial_number
+# puts song.initial_number
 song.print_song
 
-# song2 = BeerSong.new(100)
-# puts song2.initial_number
-#
+song2 = BeerSong.new(100)
+song2.print_song
+
 # song3 = BeerSong.new(-5)
-# puts song3.initial_number
+# song3.print_song
+# Need to fix so it doesnt repeat if initial_number is 0
