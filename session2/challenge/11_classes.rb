@@ -40,13 +40,6 @@ class BeerSong
       puts "#{y} bottles of beer on the wall,\n#{y} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
     }
   end
-
-  # def practice_function
-  #   num_using = @initial_number
-  #   nums_to_sing = [*1..num_using].reverse
-  #   # puts nums_to_sing
-  # end
-
 end
 
 song = BeerSong.new(5)
