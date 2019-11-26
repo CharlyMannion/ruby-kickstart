@@ -9,16 +9,30 @@
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
-def alternate_words(input)
-  punctuation_removed = input.gsub(/[!@#$%^&*()-=_+|;:",.<>?]/, '')
-  puts "Punctuation removed before"
-  puts punctuation_removed
-  puts "Punctuation removed after"
-  words_array = punctuation_removed.scan(/[\w'-]+|\W+/).select {|x| x.match(/\S/)}
-  new_array = words_array.select{|x| words_array.index(x) % 2 == 0}
-  puts "new_array before"
-  puts new_array
-  p new_array
-end
+# def alternate_words(input)
+#   punctuation_removed = input.gsub('!@$#%^&*()-=_+[]:;,./<>?\\|', '')
+#   puts "Punctuation removed before"
+#   puts punctuation_removed
+#   puts "Punctuation removed after"
+#   words_array = punctuation_removed.scan(/[\w'-]+|\W+/).select {|x| x.match(/\S/)}
+#   new_array = words_array.select{|x| words_array.index(x) % 2 == 0}
+#   puts "new_array before"
+#   new_array
+#   p new_array
+# end
 
-alternate_words("Lorem ipsum dolor sit amet.")
+# alternate_words("Lorem ipsum dolor sit amet.")
+
+
+def alternate_words(sentence)
+  # this will get better when we learn regular expressions :)
+  '!@$#%^&*()-=_+[]:;,./<>?\\|'.split(//).each do |char|
+    sentence = sentence.gsub(char, ' ')
+  end
+  words = sentence.split
+  solution = []
+  words.each_with_index do |word, index|
+    solution << word if index.even?
+  end
+  solution
+end
