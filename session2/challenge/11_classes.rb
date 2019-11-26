@@ -36,14 +36,22 @@ class BeerSong
 
   def print_song
     this_num = @initial_number
-    string_song = "#{this_num.humanize.capitalize} bottles of beer on the wall,\n#{this_num.humanize.capitalize} bottles of beer,\nTake one down, pass it around,\n#{(this_num - 1).humanize.capitalize} bottles of beer on the wall."
-    puts string_song
+    nums_to_sing = [*1..this_num].reverse
+    nums_to_sing.each{|x|
+      string_song = "#{x.humanize.capitalize} bottles of beer on the wall,\n#{x.humanize.capitalize} bottles of beer,\nTake one down, pass it around,\n#{(x - 1).humanize.capitalize} bottles of beer on the wall."
+      puts string_song
+    }
   end
+
+  # def practice_function
+  #   num_using = @initial_number
+  #   nums_to_sing = [*1..num_using].reverse
+  #   # puts nums_to_sing
+  # end
 
 end
 
-song = BeerSong.new(88)
-# puts song.initial_number
+song = BeerSong.new(5)
 song.print_song
 
 # song2 = BeerSong.new(100)
