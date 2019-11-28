@@ -8,7 +8,6 @@
 # word_count "The dog and the cat" # => {"the" => 2, "dog" => 1, "and" => 1, "cat" => 1}
 
 def word_count(input)
-  to_return = {}
   input_array = input.downcase.split()
   input_hash = Hash[input_array.collect { |item| [item, input_array.count(item)] } ]
 end
