@@ -29,7 +29,9 @@
 # shared [1,2,3], [3,2,1]            # => [{1=>[true, true], 2=>[true, true], 3=>[true, true]}, [1, 2, 3]]
 
 def shared(a, b)
-  a_hash = Hash[a.collect { |item| [item, true] } ]
+  p comb_arrys = a + b
+  p contr_arrys = (a+b).uniq
+  p comb_hash = Hash[contr_arrys.collect { |item| [item, comb_arrys.count(item)] } ]
 end
 
 p shared([1,2,3], [1,2,4])
