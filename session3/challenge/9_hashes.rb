@@ -33,9 +33,8 @@ def shared(a, b)
   contr_arrys = (a+b).uniq
   comb_hash = Hash[contr_arrys.collect { |item| [item, [(a.include?(item))? true : nil, (b.include?(item))? true : nil]] } ]
   empty_arr = [comb_hash, a&b ]
-  # p comb_hash = Hash[contr_arrys.collect { |item| [item, ((a.include?(item))? [true] : [nil]) ] } ]
 end
 
 
 
-p shared([1,2,3], [1,2,4])
+# p shared([1,2,3], [1,2,4])
